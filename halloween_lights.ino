@@ -6,7 +6,7 @@ enum class Mode
 
 const float lowerValue = 0.1F;
 const float upperValue = 1.0F;
-const int cycles = 10;
+const int cycles = 5;
 
 void setup()
 {
@@ -47,7 +47,7 @@ void loop()
   
   delay(10);
 
-  if (i >= static_cast<float>(cycles) * M_PI)
+  if (i >= static_cast<float>(cycles) * 2.0F * M_PI)
   {
     i = 0.0F;
     mode = (mode == Mode::Slow) ? Mode::Fast : Mode::Slow;
